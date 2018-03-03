@@ -11,16 +11,13 @@ module.exports = function(app) {
   // Below code handles when users "visit" a page.
   // In each of the below cases the user is shown an HTML page of content
   //
-  app.get("/home", function(req, res) {
-    res.sendFile(path.join(__dirname, "../home.html"));
-  });
+  // GET route for /survey returns survey.html
+    app.get('/survey', function(req, res) {
+        res.sendFile(path.join(__dirname + '/../public/survey.html'));
+    });
 
-  app.get("/survey", function(req, res) {
-    res.sendFile(path.join(__dirname, "../survey.html"));
-  });
-
-  // If no matching route is found default to home
-  app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "../home.html"));
-  });
+    // USE route returns home.html for any undefined GET routes
+    app.use(function (req, res) {
+        res.sendFile(path.join(__dirname + '/../public/home.html'));
+    });
 };
