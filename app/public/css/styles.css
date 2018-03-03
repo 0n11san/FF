@@ -1,0 +1,56 @@
+/*below started as example Grid CSS but defaulted back to simpler secondary mized w/ bootstrap
+/* .grid {
+  display: grid;
+  grid-template-columns: 150px auto 150px;
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 1em;
+}
+
+header,
+aside,
+article,
+footer {
+  background: #eaeaea;
+  padding: 1em;
+}
+
+header, footer {
+  grid-column: 1 / 4;
+} */
+
+/* Demo Specific Styles */
+/* body {
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+}
+
+.grid > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-rows: repeat(2, auto-fit);
+    align-items: center;
+    justify-content: center;
+}
+
+ * {
+  background: blue;
+  font-family: 'Karma', serif;
+}
+
+/* overpower bootstrap defaults*/
+
+body {
+  background: white;
+}
+
+h1, h2, h3 {
+  font-family: 'Karma', serif;
+}
